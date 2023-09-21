@@ -5,5 +5,5 @@ import (
 )
 
 func makeCoffee(c *fiber.Ctx) error {
-	return fiber.ErrTeapot
+	return c.SendStatus(fiber.StatusTeapot)
 }

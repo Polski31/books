@@ -1,7 +1,7 @@
 package model
 
 const (
-	databaseUri            = ""
-	databaseName           = ""
-	databaseCollectionName = "books"
+	databaseUri            = "" // enter your database uri here
+	databaseName           = "" // enter your database name here
+	databaseCollectionName = "" // enter your database collection name here
 )

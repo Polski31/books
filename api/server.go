@@ -2,8 +2,9 @@ package api
 
 import (
 	"books/model"
-	"github.com/gofiber/fiber/v2"
 	"strings"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func StartServer() {

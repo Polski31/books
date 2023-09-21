@@ -1,11 +1,14 @@
 package api
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"fmt"
+	"github.com/gofiber/fiber/v2"
+)
 
 func setupRoutes(app *fiber.App) {
-	app.Get("/getBooks", getBooks)
-	app.Post("/addBook", addBook)
-	app.Get("/getBook/:isbn", getBook)
+	app.Get(fmt.Sprintf("%s/%s", basePath, "getBooks"), getBooks)
+	app.Post(fmt.Sprintf("%s/%s", basePath, "addBook"), addBook)
+	app.Get(fmt.Sprintf("%s/%s/:%s", basePath, "getBook", urlFilterVariable), getBook)
 
-	app.Get("/makeCoffee", makeCoffee)
+	app.Get(fmt.Sprintf("%s/%s", basePath, "makeCoffee"), makeCoffee)
 }
